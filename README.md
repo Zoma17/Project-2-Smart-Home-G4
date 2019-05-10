@@ -26,17 +26,25 @@ How To Deal With Git :
 if you are team 1 run :
 
 1 - git checkout team1
+
 work as u want here and then to the commit part :
+
 1 - git add -A
+
 2 - git commit -m "commit message u want"
+
 3 - git push origin team1
 
 if you are team 2 run :
 
 1 - git checkout team2
+
 work as u want here and then to the commit part :
+
 1 - git add -A
+
 2 - git commit -m "commit message u want"
+
 3 - git push origin team2
 
 
