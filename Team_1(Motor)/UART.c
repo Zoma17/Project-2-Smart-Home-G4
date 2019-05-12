@@ -1,4 +1,5 @@
 #include "UART.h"
+#include "tm4c123gh6pm.h"
 
 void UART0_Init(uint32 baudrate){
     SETBIT(RCGCUART,0);          //Enable UART0
@@ -21,9 +22,15 @@ void UART0_Init(uint32 baudrate){
     // SETBIT(UART0->CTL,9);
     UART0->CC=0x0;                      // Clock source is the default (BRD Equation)
     UART0->CTL |= 0x00000301;         // enable UART0 Receiving and transmitting
+}
 
-
-
+void init_UART_Read_Interrupt(void){
+		PORT_A ->IS 		&= ~0x01;						// Level Interrupt on Rx pin
+		PORT_A -> IBE 	&= ~0x01;						// single edge
+		PORT_A -> IEV		&= ~0x01;						// Low level so will be configured with Pull up resistor
+		PORT_A -> ICR		|= 0x01;						// Clear UART0 pin interrupt
+		UART0->IM 			|= 0x10;								// Enbale Interrupt on UART0
+		NVIC_EN0_R 			|= 0x20; 								// Enable IRQ of UART0
 }
 
 
@@ -36,6 +43,13 @@ uint8 UART0_Read(void){
 	return (uint8)(UART0->DATA & 0xFF);
 }
 
+void UART0_Handler(void){
+	uint8 c;
+	if(UART0->MIS & 0x10){
+		c = UART0->DATA;
+		UART0->ICR = 0x10;				// Clear UART0 interrupt flag
+	}
+}
 void UART0_Write(uint8 data){
 	while((UART0-> FLAG & 0x00000020) != 0);
 	UART0->DATA = data;
