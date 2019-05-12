@@ -19,3 +19,10 @@ Components Needed
 For the two push buttons, use the onboard push buttons of launchpad 2. For the temperature
 sensor, use the internal temperature sensor of launchpad 1.
 
+how to commit ur changes :
+
+1 - git add -A
+
+2 - git commit -m "commit msg"
+
+3 - git push
