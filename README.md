@@ -19,6 +19,13 @@ Components Needed
 For the two push buttons, use the onboard push buttons of launchpad 2. For the temperature
 sensor, use the internal temperature sensor of launchpad 1.
 
+very important note :
+
+before going to your branch and work there i mean at the first time clone the master branch and then do the steps down there 
+
+after you end the downsteps make a pull request and don't forget to open issue about what you are working at
+
+
 
 
 How To Deal With Git :
