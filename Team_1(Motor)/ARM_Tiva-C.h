@@ -132,13 +132,16 @@ volatile uint32 PCellID3;
 
 
 
-
 /*==========  SYSTEM CONTROL REGISTERS  ============*/
 #define GPIOHBCTL        (*((volatile uint32 *)0x400FE06C)) //to choose wether APB or AHB, 0 for APB which is the default
 #define RCGCGPIO         (*((volatile uint32 *)0x400FE608)) //to enable the clock for the ports , default is 0 to be disabled; 1 to enable
 #define RCGCUART         (*((volatile uint32 *)0x400FE618)) //to enable the UARTs clock
 #define RCGCADC          (*((volatile unsigned long *)0x400FE638))
 #define SYSCTL_RCGC0_R   (*((volatile unsigned long *)0x400FE100)) //to enable the ADC0
+#define SYSCTL_RCGCPWM_R        (*((volatile unsigned long *)0x400FE640))
+#define SYSCTL_RCGCGPIO_R       (*((volatile unsigned long *)0x400FE608))
+#define SYSCTL_RCC_R            (*((volatile unsigned long *)0x400FE060))
+
 /* ============ UART REGISTERS ========== */
 
 #define UART0  (((volatile UART_Type * ) 0x4000C000))
@@ -150,6 +153,7 @@ volatile uint32 PCellID3;
 #define UART6  (((volatile UART_Type * ) 0x40012000))
 #define UART7  (((volatile UART_Type * ) 0x40013000))
 
+
 /* ============ ADC0 REGISTERS ========== */
 #define ADC0_SSPRI_R            (*((volatile unsigned long *)0x40038020))
 #define ADC0_ACTSS_R            (*((volatile unsigned long *)0x40038000))
@@ -160,3 +164,12 @@ volatile uint32 PCellID3;
 #define ADC0_PSSI_R             (*((volatile unsigned long *)0x40038028))
 #define ADC0_RIS_R              (*((volatile unsigned long *)0x40038004))
 #define ADC0_SSFIFO3_R          (*((volatile unsigned long *)0x400380A8))	
+
+/*==========PWM registers=========*/
+#define PWM1_3_CTL_R            (*((volatile unsigned long *)0x40029100))
+#define PWM1_3_CMPA_R           (*((volatile unsigned long *)0x40029118))
+#define PWM1_3_CMPB_R           (*((volatile unsigned long *)0x4002911C))
+#define PWM1_3_GENA_R           (*((volatile unsigned long *)0x40029120))
+#define PWM1_3_LOAD_R           (*((volatile unsigned long *)0x40029110))
+#define PWM1_ENABLE_R           (*((volatile unsigned long *)0x40029008))
+

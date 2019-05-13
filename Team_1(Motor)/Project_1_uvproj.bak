@@ -416,11 +416,6 @@
           <GroupName>src</GroupName>
           <Files>
             <File>
-              <FileName>PLL.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\CSE 312 Microprocessor Based Systems [Spring 2019]\Keil Projects\Project4_UART\PLL.c</FilePath>
-            </File>
-            <File>
               <FileName>Team_1_main.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Team_1_main.c</FilePath>
@@ -435,6 +430,11 @@
               <FileType>1</FileType>
               <FilePath>.\UART.c</FilePath>
             </File>
+            <File>
+              <FileName>temp_sensor.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\temp_sensor.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -444,16 +444,6 @@
               <FileName>PLL.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\CSE 312 Microprocessor Based Systems [Spring 2019]\Keil Projects\Project4_UART\PLL.h</FilePath>
-            </File>
-            <File>
-              <FileName>tm4c123gh6pm.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\CSE 312 Microprocessor Based Systems [Spring 2019]\Keil Projects\Project4_UART\tm4c123gh6pm.h</FilePath>
-            </File>
-            <File>
-              <FileName>ARM_Tiva-C.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\ARM_Tiva-C.h</FilePath>
             </File>
             <File>
               <FileName>PORT.h</FileName>
@@ -469,6 +459,21 @@
               <FileName>UART.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\UART.h</FilePath>
+            </File>
+            <File>
+              <FileName>tm4c123gh6pm.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\tm4c123gh6pm.h</FilePath>
+            </File>
+            <File>
+              <FileName>temp_sensor.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\temp_sensor.h</FilePath>
+            </File>
+            <File>
+              <FileName>ARM_Tiva-C.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\ARM_Tiva-C.h</FilePath>
             </File>
           </Files>
         </Group>

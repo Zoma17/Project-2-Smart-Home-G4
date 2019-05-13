@@ -1,4 +1,4 @@
-#include "ARM_Tiva-C.h"
+
 #include "STD_Types.h"
 #include "temp_sensor.h"
 #include "init_port&portDirection.c"
