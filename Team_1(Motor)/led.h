@@ -1,7 +1,8 @@
 #ifndef __LED_H__
 #define __LED_H__
-#include "tm4c123gh6pm.h"
+
 #include "STD_Types.h"
+#include "ARM_Tiva-C.h"
 
 void led_Init() ;
 

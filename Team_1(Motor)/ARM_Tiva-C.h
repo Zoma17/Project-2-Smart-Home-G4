@@ -137,6 +137,9 @@ volatile uint32 PCellID3;
 #define GPIOHBCTL        (*((volatile uint32 *)0x400FE06C)) //to choose wether APB or AHB, 0 for APB which is the default
 #define RCGCGPIO         (*((volatile uint32 *)0x400FE608)) //to enable the clock for the ports , default is 0 to be disabled; 1 to enable
 #define RCGCUART         (*((volatile uint32 *)0x400FE618)) //to enable the UARTs clock
+#define SYSCTL_RCGCPWM_R        (*((volatile unsigned long *)0x400FE640))
+#define SYSCTL_RCGCGPIO_R       (*((volatile unsigned long *)0x400FE608))
+#define SYSCTL_RCC_R            (*((volatile unsigned long *)0x400FE060))
 
 /* ============ UART REGISTERS ========== */
 
@@ -149,3 +152,10 @@ volatile uint32 PCellID3;
 #define UART6  (((volatile UART_Type * ) 0x40012000))
 #define UART7  (((volatile UART_Type * ) 0x40013000))
 
+/*==========PWM registers=========*/
+#define PWM1_3_CTL_R            (*((volatile unsigned long *)0x40029100))
+#define PWM1_3_CMPA_R           (*((volatile unsigned long *)0x40029118))
+#define PWM1_3_CMPB_R           (*((volatile unsigned long *)0x4002911C))
+#define PWM1_3_GENA_R           (*((volatile unsigned long *)0x40029120))
+#define PWM1_3_LOAD_R           (*((volatile unsigned long *)0x40029110))
+#define PWM1_ENABLE_R           (*((volatile unsigned long *)0x40029008))
