@@ -137,7 +137,8 @@ volatile uint32 PCellID3;
 #define GPIOHBCTL        (*((volatile uint32 *)0x400FE06C)) //to choose wether APB or AHB, 0 for APB which is the default
 #define RCGCGPIO         (*((volatile uint32 *)0x400FE608)) //to enable the clock for the ports , default is 0 to be disabled; 1 to enable
 #define RCGCUART         (*((volatile uint32 *)0x400FE618)) //to enable the UARTs clock
-
+#define RCGCADC          (*((volatile unsigned long *)0x400FE638))
+#define SYSCTL_RCGC0_R   (*((volatile unsigned long *)0x400FE100)) //to enable the ADC0
 /* ============ UART REGISTERS ========== */
 
 #define UART0  (((volatile UART_Type * ) 0x4000C000))
@@ -149,3 +150,13 @@ volatile uint32 PCellID3;
 #define UART6  (((volatile UART_Type * ) 0x40012000))
 #define UART7  (((volatile UART_Type * ) 0x40013000))
 
+/* ============ ADC0 REGISTERS ========== */
+#define ADC0_SSPRI_R            (*((volatile unsigned long *)0x40038020))
+#define ADC0_ACTSS_R            (*((volatile unsigned long *)0x40038000))
+#define ADC0_EMUX_R             (*((volatile unsigned long *)0x40038014))
+#define ADC0_SSMUX3_R           (*((volatile unsigned long *)0x400380A0))
+#define ADC0_SSCTL3_R           (*((volatile unsigned long *)0x400380A4))	
+#define ADC0_ISC_R              (*((volatile unsigned long *)0x4003800C))
+#define ADC0_PSSI_R             (*((volatile unsigned long *)0x40038028))
+#define ADC0_RIS_R              (*((volatile unsigned long *)0x40038004))
+#define ADC0_SSFIFO3_R          (*((volatile unsigned long *)0x400380A8))	
