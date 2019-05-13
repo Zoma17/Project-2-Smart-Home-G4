@@ -1,7 +1,7 @@
 
 #include "STD_Types.h"
 #include "temp_sensor.h"
-#include "init_port&portDirection.c"
+
 
 void adc_init(){
 	volatile uint8 delay = 0;
