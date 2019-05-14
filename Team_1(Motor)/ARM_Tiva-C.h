@@ -141,7 +141,8 @@ volatile uint32 PCellID3;
 #define SYSCTL_RCGCPWM_R        (*((volatile unsigned long *)0x400FE640))
 #define SYSCTL_RCGCGPIO_R       (*((volatile unsigned long *)0x400FE608))
 #define SYSCTL_RCC_R            (*((volatile unsigned long *)0x400FE060))
-
+#define SYSCTL_RCGCADC_R        (*((volatile unsigned long *)0x400FE638))
+	
 /* ============ UART REGISTERS ========== */
 
 #define UART0  (((volatile UART_Type * ) 0x4000C000))
