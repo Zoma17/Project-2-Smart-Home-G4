@@ -5,27 +5,33 @@
 #include "delay.h"
 void SystemInit(){}
 	
-
-
-
-void rorateClockWise(void)
+void rotateCounterClockWise(void)
 {
-	int i;
-	for(i=0;i<4;i++)
+	int i,j=5;
+	for(i=0;i<16;i++)
 		{
-			GPIO_PORTA_DATA_R |= 1 << i;
+			GPIO_PORTA_DATA_R |= 1 << j;
+			if(j==2)
+				j=5;
+			else
+				j--;
 			delay1ms();
 		}
 }
 
 
-void rorateCounterClockWise(void)
+void rotateClockWise(void)
 {
-	int i;
-	for(i=3;i>=0;i--)
+	int i,j=2;
+	for(i=0;i<16;i++)
 		{
-			GPIO_PORTA_DATA_R |= 1 << i;
+			
+			GPIO_PORTA_DATA_R |= 1 << j;
 			delay1ms();
+			if(j==5)
+				j=2;
+			else
+				j++;
 		}
 }
 
@@ -33,12 +39,12 @@ void rotate(char direction)
 {
 	switch (direction)
 		{
-			case '1': 
-				rorateClockWise();
+			case '1':
+				rotateClockWise();
 				break;
 			case '0':
-				rorateCounterClockWise();
+				rotateCounterClockWise();
 				break;
 		}
-		
+
 }

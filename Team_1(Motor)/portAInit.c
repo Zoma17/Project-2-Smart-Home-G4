@@ -9,8 +9,8 @@ void portAInit(void)
 	SYSCTL_RCGCGPIO_R |= 0x01;
 	dummy = 1;
 	GPIO_PORTA_LOCK_R = 0x4C4F434B;
-	GPIO_PORTA_CR_R |= 0x0f;
-	GPIO_PORTA_DIR_R &= 0xf0;
-	GPIO_PORTA_AFSEL_R &= 0xf0;
-	GPIO_PORTA_DEN_R |= 0x0f;
+	GPIO_PORTA_CR_R |= 0x3c;
+	GPIO_PORTA_DIR_R |= 0x3c;
+	GPIO_PORTA_AFSEL_R &= 0xc3;
+	GPIO_PORTA_DEN_R |= 0x3c;
 }
