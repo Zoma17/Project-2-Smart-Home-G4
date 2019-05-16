@@ -1,0 +1,117 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+D:\Micro\ADC\prj4_uart.uvproj
+Project File Date:  05/16/2019
+
+<h2>Output:</h2>
+Build target 'prj4_uart'
+compiling main.c...
+DIO.h(46): warning:  #1-D: last line of file ends without a newline
+  #endif /* DIO_INT_H_ */
+LCD.h(7): warning:  #1295-D: Deprecated declaration LCD_Init - give arg types
+  void LCD_Init();
+LCD.h(13): warning:  #1-D: last line of file ends without a newline
+  #endif
+Delay.h(11): warning:  #1-D: last line of file ends without a newline
+  #endif
+UART.h(14): warning:  #1295-D: Deprecated declaration UART0_Interrupt_Init - give arg types
+  void UART0_Interrupt_Init();
+main.c(78): warning:  #177-D: variable "x" was declared but never referenced
+        uint8_t x;
+main.c(79): warning:  #177-D: variable "in" was declared but never referenced
+        uint8_t in,in2;
+main.c(79): warning:  #177-D: variable "in2" was declared but never referenced
+        uint8_t in,in2;
+main.c(80): warning:  #177-D: variable "instr" was declared but never referenced
+        uint8_t instr[50];
+main.c(81): warning:  #177-D: variable "out" was declared but never referenced
+        uint8_t out;
+main.c: 10 warnings, 0 errors
+linking...
+Program Size: Code=4112 RO-data=636 RW-data=0 ZI-data=608  
+".\prj4_uart.axf" - 0 Error(s), 10 Warning(s).
+Load "D:\\Micro\\ADC\\prj4_uart.axf" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Load "D:\\Micro\\ADC\\prj4_uart.axf" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+): warning:  #1-D: last line of file ends without a newline
+  #endif
+Delay.h(11): warning:  #1-D: last line of file ends without a newline
+  #endif
+LCD_Config.h(26): warning:  #1-D: last line of file ends without a newline
+  #endif
+LCD.c(51): warning:  #1-D: last line of file ends without a newline
+  }
+LCD.c: 6 warnings, 0 errors
+compiling DIO.c...
+DIO.h(46): warning:  #1-D: last line of file ends without a newline
+  #endif /* DIO_INT_H_ */
+DIO.c(240): warning:  #111-D: statement is unreachable
+                     break;
+DIO.c(244): warning:  #111-D: statement is unreachable
+                          break;
+DIO.c(248): warning:  #111-D: statement is unreachable
+                        break;
+DIO.c(252): warning:  #111-D: statement is unreachable
+                        break;
+DIO.c(256): warning:  #111-D: statement is unreachable
+                        break;                                  
+DIO.c(260): warning:  #111-D: statement is unreachable
+                        break;                                  
+DIO.c(262): warning:  #940-D: missing return statement at end of non-void function "DIO_ReadPort"
+  }
+DIO.c: 8 warnings, 0 errors
+compiling Delay.c...
+Delay.h(11): warning:  #1-D: last line of file ends without a newline
+  #endif
+Delay.c(24): warning:  #1-D: last line of file ends without a newline
+  }
+Delay.c: 2 warnings, 0 errors
+compiling Pot_ADC.c...
+UART.h(14): warning:  #1295-D: Deprecated declaration UART0_Interrupt_Init - give arg types
+  void UART0_Interrupt_Init();
+Pot_ADC.c: 1 warning, 0 errors
+compiling Switch.c...
+UART.h(14): warning:  #1295-D: Deprecated declaration UART0_Interrupt_Init - give arg types
+  void UART0_Interrupt_Init();
+DIO.h(46): warning:  #1-D: last line of file ends without a newline
+  #endif /* DIO_INT_H_ */
+Delay.h(11): warning:  #1-D: last line of file ends without a newline
+  #endif
+Switch.c: 3 warnings, 0 errors
+linking...
+Program Size: Code=4280 RO-data=636 RW-data=0 ZI-data=608  
+".\prj4_uart.axf" - 0 Error(s), 30 Warning(s).
+Load "D:\\Micro\\ADC\\prj4_uart.axf" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+j4_uart.axf" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Load "D:\\Micro\\ADC\\prj4_uart.axf" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Failed!
+Error: Flash Download failed  -  "Cortex-M4"
+Load "D:\\Micro\\ADC\\prj4_uart.axf" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Connection failed!, error code=&d
+Error: Flash Download failed  -  Target DLL has been cancelled
+Load "D:\\Micro\\ADC\\prj4_uart.axf" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
