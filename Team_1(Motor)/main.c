@@ -1,5 +1,5 @@
 #include "stdint.h"
-#include "D:/3rd CSE/Keil/EE319Kware/inc/tm4c123gh6pm.h"
+#include "tm4c123gh6pm.h"
 #include "portInit.h"
 #include "timerInit.h"
 #include "delay.h"
@@ -7,14 +7,16 @@ void SystemInit(){}
 	
 void rotateCounterClockWise(void)
 {
-	int i,j=5;
+	int i,j=0;
+	int temp [] = {0x9, 0x3, 0x6, 0xc};
 	for(i=0;i<16;i++)
 		{
-			GPIO_PORTA_DATA_R |= 1 << j;
-			if(j==2)
-				j=5;
+			GPIO_PORTA_DATA_R = 0x0;
+			GPIO_PORTA_DATA_R = temp[j];
+			if(j==3)
+				j=0;
 			else
-				j--;
+				j++;
 			delay1ms();
 		}
 }
@@ -22,16 +24,18 @@ void rotateCounterClockWise(void)
 
 void rotateClockWise(void)
 {
-	int i,j=2;
+	int i,j=3;
+	int temp [] = {0x9, 0x3, 0x6, 0xc};
 	for(i=0;i<16;i++)
 		{
-			
-			GPIO_PORTA_DATA_R |= 1 << j;
-			delay1ms();
-			if(j==5)
-				j=2;
+			GPIO_PORTA_DATA_R = 0x0;
+			GPIO_PORTA_DATA_R = temp[j];
+			if(j==0)
+				j=3;
 			else
-				j++;
+				j--;
+			delay1ms();
+
 		}
 }
 
@@ -39,12 +43,16 @@ void rotate(char direction)
 {
 	switch (direction)
 		{
-			case '1':
+			case 'R':
 				rotateClockWise();
 				break;
-			case '0':
+			case 'L':
 				rotateCounterClockWise();
 				break;
 		}
 
 }
+
+
+
+
